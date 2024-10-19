@@ -4,7 +4,6 @@ void print_intro();
 void scan_objeto();
 
 int main(void) {
-    int objescolhido;
 
     print_intro();
     scan_objeto();
