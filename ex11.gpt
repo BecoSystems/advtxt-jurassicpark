@@ -1,4 +1,4 @@
-algoritmo escolha_de_objetos;
+algoritmo escolha_de_objetos_e_verbos;
 
     variáveis
        objeto : inteiro;
