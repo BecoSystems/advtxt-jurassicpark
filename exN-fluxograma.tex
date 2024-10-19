@@ -126,8 +126,8 @@ Exemplo de letra em \textit{itálico é com textit}, e em \textbf{bold face é c
     \node (txta) [print, below of=inicio] {Você está em um parque de dinossauros quando de repente avista caindo do céu um t-rex com mochila á jato. Desesperado, percebe que possui um chiclete no bolso e mais à frente uma bazuca encostada em uma árvore.};
     \node (inp1) [input, below of=txta] {Escolha um objeto: Chiclete OU Bazuca.};
     \node (dec1) [decision, below of=inp1] {O objeto escolhido foi Chiclete?};
-    \node (sim) [print, below of=tot1, node distance=4cm] {Você pega o chiclete, masca e assopra até formar uma bola gigante que te faz flutuar.};
-    \node (nao) [print, right of=tot1, node distance=2cm] {Você decide pegar a bazuca e atirar no t-rex, porém a bazuca falha e explode em você. Este é seu fim meu amigo.};
+    \node (sim) [print, below of=dec1, node distance=4cm] {Você pega o chiclete, masca e assopra até formar uma bola gigante que te faz flutuar.};
+    \node (nao) [print, right of=dec1, node distance=2cm] {Você decide pegar a bazuca e atirar no t-rex, porém a bazuca falha e explode em você. Este é seu fim meu amigo.};
     \node (fim) [startend, below of=nao] {Fim};
     \node (inp2) [input, below of=sim] {Escolha um verbo: Estourar OU Permanecer.};
     \node (dec2) [decision, below of=inp2] {O verbo escolhido foi Estourar?};
