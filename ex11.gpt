@@ -1,0 +1,31 @@
+algoritmo escolha_de_objetos;
+
+    variáveis
+       objeto : inteiro;
+       verbo : inteiro;
+    fim-variáveis
+
+ início
+    imprima("HISTÓRIA");
+    imprima("Escolha um dos objetos (1.Chiclete ou 2.Bazuca):");
+    objeto := leia();
+
+    se objeto = 1 então
+        imprima("Você venceu");
+        imprima("Escolha um dos verbos (1.Estourar ou 2.Permanecer:)");
+        verbo := leia();
+            se verbo = 1 então
+                imprima("Você venceu");
+            fim-se
+
+            se verbo = 2 então
+                imprima("Você perdeu");
+            fim-se
+    fim-se
+
+    se objeto = 2 então
+          imprima("Você perdeu");
+    fim-se
+
+fim
+
