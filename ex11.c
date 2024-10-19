@@ -15,14 +15,16 @@ int main(void) {
     scanf("%i", &objCerto);
     if(objCerto != 1) {
         obj_errado();
+        return 0;
     }
     print_des();
     scanf("%i", &verboCerto);
     if(verboCerto != 1) {
         verbo_errado();
     }
+    else {
     print_vitoria();
-
+    }
 }
 
 
