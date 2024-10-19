@@ -6,13 +6,13 @@ algoritmo escolha_de_objetos_e_verbos;
     fim-variáveis
 
  início
-    imprima("Você está em um parque de dinossauros quando avista caindo do éu um t-rex com mochila à jato. Desesperado, percebe que possui um chiclete no bolso e mais à frente uma bazuca encostada em uma árvore.");
-    imprima("Escolha um dos objetos (1.Chiclete ou 2.Bazuca):");
+    imprima("Você está em um parque de dinossauros quando avista caindo do céu um t-rex com mochila à jato. Desesperado, percebe que possui um chiclete no bolso e mais à frente uma bazuca encostada em uma árvore.");
+    imprima("Escolha um dos objetos. (1.Chiclete ou 2.Bazuca):");
     objeto := leia();
 
     se objeto = 1 então
         imprima("Você pega o chiclete, masca e assopra até formar uma bola gigante que te faz flutuar.");
-        imprima("Escolha um dos verbos (1.Estourar ou 2.Permanecer:)");
+        imprima("Escolha um dos verbos. (1.Estourar ou 2.Permanecer:)");
         verbo := leia();
             se verbo = 1 então
                 imprima("Você estoura a bola de chiclete, caindo em cima da mochila à jato do t-rex, ativa o protocolo de auto destruição dela e sai correndo dali. Parabéns você está vivo.");
