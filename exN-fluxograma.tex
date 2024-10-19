@@ -1,13 +1,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Criação de Fluxograma usando LaTeX
 %
-% Assunto: escrever aqui um comentário com uma
-%          breve explicação do exercício
+% Assunto: Programa com fluxograma de
+%          escolhas de objetos e verbos
+%
 %
 % Autores:
-%     Nome do Aluno 1
-%     Nome do Aluno 2
-%     Nome do Aluno 3
+%     Guilherme Afonso Correia
+%     Vinícius Lins
+%
 %
 % Coordenação:
 %     Prof. Dr. Ruben Carlo Benante
@@ -50,8 +51,8 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % capa %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{Fluxograma: nome do fluxograma}
-\author{Autor1 \\ Autor2 \\ Autor3}
+\title{Fluxograma: Fluxograma do ex11.}
+\author{Guilherme Vilar \\ Vinícius Lins}
 
 \begin{document}
 
@@ -76,11 +77,11 @@
 
 \begin{abstract}
 
-\textbf{Assunto:} Programa tal tal
+\textbf{Assunto:} Programa de decisões com fluxograma
 
 % descrever em poucas palavras seu projeto aqui
 
-O programa tal e tal faz isso e isso. Neste artigo iremos apresentar o seu fluxograma completo
+O programa se baseado em escolha. Neste artigo iremos apresentar o seu fluxograma completo
 % e (opcionalmente) o seu algoritmo.
 
 Após a modelagem do fluxograma e desenvolvimento da lógica de programação em algoritmo,
@@ -105,7 +106,7 @@ o programa será implementado na Linguagem de Programação \texttt{C}
 
 % Descrever melhor seu projeto aqui
 
-Este programa faz isso, isso e \texttt{também em fonte mono-espaçada faz isso}.
+Este programa se baseia na escolha de objetos e verbos para uma determinada situação, havendo consequências certas para os objetos e verbos certos, \texttt{e consequências ruins para os objetos e verbos errados}.
 
 O programa será modelado em \textit{fluxograma} em uma primeira fase, em seguida
 sua lógica será desenvolvida em formato de \textit{algoritmo}, para então
@@ -122,23 +123,30 @@ Exemplo de letra em \textit{itálico é com textit}, e em \textbf{bold face é c
 \begin{tikzpicture}
     % colocar nodos
     \node (inicio) [startend] {Inicio};
-    \node (txta) [print, below of=inicio] {Texto A};
-    \node (inp1) [input, below of=txta] {objeto};
-    \node (tot1) [process, below of=inp1] {total $\leftarrow$ objeto + 1};
-    \node (maior) [decision, below of=tot1] {total $>$ M};
-    \node (sim) [print, right of=maior, node distance=4cm] {Total estourou};
-    \node (nao) [print, below of=maior, node distance=2.4cm] {Total ok};
+    \node (txta) [print, below of=inicio] {Você está em um parque de dinossauros quando de repente avista caindo do céu um t-rex com mochila á jato. Desesperado, percebe que possui um chiclete no bolso e mais à frente uma bazuca encostada em uma árvore.};
+    \node (inp1) [input, below of=txta] {Escolha um objeto: Chiclete OU Bazuca.};
+    \node (dec1) [decision, below of=inp1] {O objeto escolhido foi Chiclete?};
+    \node (sim) [print, below of=tot1, node distance=4cm] {Você pega o chiclete, masca e assopra até formar uma bola gigante que te faz flutuar.};
+    \node (nao) [print, right of=tot1, node distance=2cm] {Você decide pegar a bazuca e atirar no t-rex, porém a bazuca falha e explode em você. Este é seu fim meu amigo.};
     \node (fim) [startend, below of=nao] {Fim};
+    \node (inp2) [input, below of=sim] {Escolha um verbo: Estourar OU Permanecer.};
+    \node (dec2) [decision, below of=inp2] {O verbo escolhido foi Estourar?};
+    \node (sim2) [print, below of=dec2, node distance=4cm] {Você estoura a bola de chiclete, cai em cima da mochila à jato do t-rex, ativa o protocolo de auto-destruição dela e sai correndo dali. Parabens você saiu vivo.};
+    \node (fim2) [startend, below of=sim2] {Fim};
+    \node (nao2) [print, right of=dec2, node distance=2cm] {Você decide continuar flutuando até finalmente alcançar algum local alto para se refugiar, porém você dá de cara com um velociraptor, que te devora. É uma pena colega.};
+    \node (fim3) [startend, below of=nao2] {Fim};
     % \node (vazio1) [empty, right of=fim, node distance=4cm] {};
     % Desenhar as setas
     \path [line] (inicio) -- (txta);
     \path [line] (txta) -- (inp1);
-    \path [line] (inp1) -- (tot1);
-    \path [line] (tot1) -- (maior);
-    \path [line] (maior) -- (sim);
-    \path [line] (sim) -- (vazio1) -- (fim);
-    \path [line] (maior) -- (nao);
-    \path [line] (nao) -- (fim);
+    \path [line] (inp1) -- (dec1);
+    \path [line] (dec1) -- (sim);
+    \path [line] (sim) -- (inp2);
+    \path [line] (inp2) -- (dec2);
+    \path [line] (dec2) -- (sim2);
+    \path [line] (sim2) -- (fim2);
+    \path [line] (dec1) -- (nao) -- (fim);
+    \path [line] (dec2) -- (nao2) -- (fim3);
 \end{tikzpicture}
 
 
@@ -161,29 +169,18 @@ Exemplo de letra em \textit{itálico é com textit}, e em \textbf{bold face é c
 \subsection*{Discentes}
 
 \begin{enumerate}
-    \item \textbf{Nome Completo:} Fulano de Tal Um
+    \item \textbf{Nome Completo:} Guilherme Afonso Correia da Costa Vilar
     \begin{description}
-        \item [Email:] \email{blabla@poli.br}
+        \item [Email:] \email{gccv@poli.br}
         \item [Endereço:]
         \item [Matrícula:]
-        \item [CPF:]
+        \item [CPF:158.481.924-30]
         \item [RG:]
         \item [Telefone:]
         \item [Currículo Lattes:] \url{http://lattes.cnpq.br/nnnnn}
     \end{description}
 
     \item \textbf{Nome Completo:} Fulano de Qual Dois
-    \begin{description}
-        \item [Email:] \email{blabla@poli.br}
-        \item [Endereço:]
-        \item [Matrícula:]
-        \item [CPF:]
-        \item [RG:]
-        \item [Telefone:]
-        \item [Currículo Lattes:] \url{http://lattes.cnpq.br/nnnnn}
-    \end{description}
-
-    \item \textbf{Nome Completo:} Fulano de Como Três
     \begin{description}
         \item [Email:] \email{blabla@poli.br}
         \item [Endereço:]
