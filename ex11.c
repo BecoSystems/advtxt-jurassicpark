@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "ex11.h"
 
 void print_intro();
 void obj_errado();
