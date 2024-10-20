@@ -1,5 +1,5 @@
-#ifndef EX11_H_INCLUDED
-#define EX11_H_INCLUDED
+#ifndef EX11_H
+#define EX11_H
 
 int objCerto;
 int verboCerto;
