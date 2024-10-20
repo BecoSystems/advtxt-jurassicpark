@@ -6,25 +6,26 @@ algoritmo escolha_de_objetos_e_verbos;
     fim-variáveis
 
  início
-    imprima("Você está em um parque de dinossauros quando avista caindo do céu um t-rex com mochila à jato. Desesperado, percebe que possui um chiclete no bolso e mais à frente uma bazuca encostada em uma árvore.");
-    imprima("Escolha um dos objetos. (1.Chiclete ou 2.Bazuca):");
+    imprima("Bem vindo ao Parque dos Dinossauros, um jogo onde a adaptação é essencial, faça as melhores escolhas e seja recompensado. Boa sorte!\n");
+    imprima("Você acorda no meio de uma floresta, perdido, sem saber exatamente está, começa a andar e procurar por informações chegando perto de um campo aberto, vê uma placa, PERIGO: ZONA DE POUSO. Confuso, você olha para o céu, mas percebe que não há nada, continua andando até que enxerga um prédio no final daquele terreno. Intrigado, seu personagem se aproxima do local, depois de alguns passos o chão estremece, ele nota o que parece ser um animal gigante atrás de algumas árvores, é um braquiossauro, assustado, você percebe que está num parque de dinossauros, corre em direção ao laboratório, quando escuta um rugido distante, é um tiranossauro rex usando uma mochila à jato. Desesperado, percebe que possui um chiclete em seu bolso e mais à frente uma bazuca encostada numa árvore.\n");
+    imprima("Com pouco tempo para pensar, você faz sua escolha.\n(1.Chiclete ou 2.Bazuca):");
     objeto := leia();
 
     se objeto = 1 então
-        imprima("Você pega o chiclete, masca e assopra até formar uma bola gigante que te faz flutuar.");
-        imprima("Escolha um dos verbos. (1.Estourar ou 2.Permanecer:)");
+        imprima("Você pega o chiclete, masca e assopra até formar uma bola gigante que te faz flutuar, te fazendo escapar momentaneamente.\n");
+        imprima("Porém, ainda não acabou, você ainda não está totalmente a salvo. Sabendo disso você decide o que fará.\n(1.Estourar ou 2.Permanecer):");
         verbo := leia();
             se verbo = 1 então
-                imprima("Você estoura a bola de chiclete, caindo em cima da mochila à jato do t-rex, ativa o protocolo de auto destruição dela e sai correndo dali. Parabéns você está vivo.");
+                imprima("Você estoura a bola de chiclete, caindo em cima da mochila à jato do t-rex, ativa o protocolo de auto destruição dela, matando o dinossauro, e sai correndo dali.\nParabéns você está vivo!");
             fim-se
 
             se verbo = 2 então
-                imprima("Você decide continuar flutuando até finalmente alcançar um lugar alto para se abrigar. Infelizmente você dá de cara com um velociraptor, que te devora. É uma pena colega.");
+                imprima("Você decide continuar flutuando até finalmente alcançar um lugar alto para se abrigar. Infelizmente você dá de cara com um velociraptor, que te devora.\nÉ uma pena colega.");
             fim-se
     fim-se
 
     se objeto = 2 então
-          imprima("Você decide pegar a bazuca e atirar no t-rex, porém a bazuca falha e explode. Este é o seu fim meu amigo.");
+          imprima("Você decide pegar a bazuca e atirar no t-rex, porém a bazuca falha e explode.\nEste é o seu fim meu amigo.");
     fim-se
 
 fim
